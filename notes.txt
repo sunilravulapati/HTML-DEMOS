@@ -1,0 +1,112 @@
+<!-- block: occupies the entire available width -->
+    <!-- only for block elements the width and height css properties will work -->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <!-- inline: occupies the required width only -->
+    <!-- width and height will only work when display property is changed to either inline-block or block! -->
+    <a href="#">Link!</a>
+    <a href="#">Link!</a>
+    <img src="../assets/chennai.webp" alt="chennai">
+
+
+h1{
+    width: 600px;
+    height: 300px;
+}
+
+a{
+    display: inline-block;
+    width: 600px;
+    height: 300px;
+}
+/*img is an inline but gets modified */
+/* img{
+    width: 800px;
+} */
+
+<h1>Lorem ipsum dolor sit.</h1>
+    <!-- two ways to align the image to the center of the page -->
+    <img src="../assets/chennai.webp" alt="chennai">
+    <div>
+        <img src="../assets/bangalore.webp" width="200px" alt="bangalore">
+    </div>
+
+
+/* cancel  the default padding and margin / reset the default properties */
+*{
+    margin:0;
+    padding:0;
+    /* if we want everything to be within the specified width we have to use box-sizing which makes everything within and the default is content-box...change it to border-box */
+    box-sizing: border-box;
+}
+
+->every element of html is a box
+->every browser contains the user agent stylesheet......this provides the default styling
+->always reset the margin and padding
+
+BOX MODEL
+padding is the space that is internal to the element
+margin is the space that is external to the element
+
+CSS Positions
+by default every element's position is static
+if it is not static then it is a positioned element
+top,left,right,bottom -> can take both positive and negative values
+there are three: static, 
+                 relative - relative to the previous position,it will stay in the document flow
+                 absolute - element is removed from the document flow and the element floats, the position is relative to its positioned parent,
+                            checks for the parent's parent and so on.... if a match is there then according to that parent else it will match the body of the document
+                 fixed - fixed and is relative to the viewport
+                 sticky - 
+
+BreakPoints
+when a specific breakpoint is breached then we must style it so that the elements are adjusted accordingly for this we use media queries
+
+MEDIA QUERIES
+syntax:
+@media media-type operator (media feature) {/*css styles*/}
+------ ---------- --------
+       screen     and,not,or,in
+       print
+       speech
+       all
+
+
+->root of the document in any is the html tag
+
+UNITS
+->for text dont use px(pixels),it will not adjust to the browser settings
+->use em or rem, 1em = 1*fontsize of the parent, it adjusts to the browser's font settings,rem = fontsize of the root element
+->majorly use the rem unit, in the cases to use the fontsize of the parent then we can use the em
+->this em or rem can also be used for others as well
+-> %(percent) => depends on the parent element's width
+-> vw(viewport width) and vh(viewport height) => depends on the viewport/ the current screen
+
+
+LAYOUT
+->every web page has a layout/structure
+->flexbox / grid / flexbox-grid
+-> with minimal lines of code we can make a good responsive web site
+->with flexbox we can align items either horizontally or vertically, this is resolved by grid layout
+1. make the parent as a flex container
+2. and create flex items and all
+
+1. make the parent as the grid container
+2. each element now occupies as block
+3. decide how many rows and columns are needed
+4. inform the grid where to place the items
+
+CSS FRAMEWORKS
+Bootstrap and TailwindCSS
+component first approach - Bootstrap
+utility first approach - TailwindCSS
+
+preflight: resets the default css for few tags to provide more customisation ability
+there is no need to provide media queries in TailwindCSS
+
+TailwindCSS installation
+1. install the tailwindcss extension from vs code and create a package.json file: npm init -y
+2. npm i tailwindcss @tailwindcss/cli
+3. create the style.css file and import the '@import "tailwindcss" '
+4. run the command: "npx @tailwindcss/cli -i ./style.css -o ./output.css --watch": this creates an output.css file which is not for the developer to do any changes,
+->what this output.css does is: tailwind css has pre defined utilities....there background working will be in the output.css file and our normal browsers dont have any tailwindcss parser so this output.css tells the browser to do the styling
+5. create a html file and add <link href="./output.css" rel="stylesheet">

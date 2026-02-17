@@ -1,0 +1,77 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* nav styling */
+nav{
+    height: 350px;
+    background-color: rgb(207, 233, 251);
+    padding:80px 70px;
+}
+
+nav h1{
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+nav p{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+nav button{
+    margin-bottom: 20px;
+    border:none;
+    padding:10px 20px;
+    border-radius: 10px;
+    background-color: blue;
+    color:aliceblue;
+    font-size: 1rem;
+}
+nav button:hover{
+    background-color: red;
+}
+
+/* main styling */
+main{
+    margin:0px 70px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    width:300px;
+    height:300px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top:10px;
+}
+.card p{
+    margin-top: 10px;
+}
+.card button{
+    margin-top: 10px;
+    border:none;
+    background-color: rgb(81, 80, 80);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card button:hover{
+    background-color: blueviolet;
+}
+main h3{
+    border-top: 2px solid lightgray;
+    padding-left: 60px;
+    font-weight: normal;
+}

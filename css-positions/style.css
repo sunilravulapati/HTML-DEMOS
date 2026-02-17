@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:2000px;
+}
+
+.parent{
+    width:700px;
+    margin:auto;
+    margin-top:150px;
+    border:2px solid grey;
+    height:700px;
+    position: relative;
+}
+.child{
+    width:100px;
+    height: 100px;
+}
+
+/* when the position is relative and we move it then that space is going to be reserved for that element as it was not removed from the document flow */
+.child1{
+    position:absolute;
+    background-color: blue;
+    left: 700px;
+}
+/* space created: the other elements should also move */
+.child2{
+    background-color: brown;
+    position: sticky;
+    top:100px;
+
+}
+.child3{
+    background-color: chartreuse;
+    position:fixed; /*it will be positioned to the viewport*/
+}

@@ -1,0 +1,137 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* nav styles */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+.logo{
+    width:80px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+nav ul{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black
+}
+
+nav ul a:hover{
+    color:orange;
+}
+
+
+/* main styles */
+
+main{
+    margin: 0px 70px;
+    margin:100px;
+}
+
+.card{
+    /* flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 300px; used to create flex width */
+    /* width: 300px;
+    height:350px; */
+    flex: 0 0 250px;
+    padding:20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 10px;
+}
+
+.card p{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card img{
+    width: 70%;
+    border-radius: 50%;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px; /* creates a gap b/w the flex items*/
+    /* flex-wrap:wrap; */
+}
+
+.card button{
+    border:none;
+    background-color:lightgreen;
+    color: blue;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+/* footer styles */
+footer{
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+}
+
+
+footer ul{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* device wise */
+/* media queries */
+@media  screen and (max-width:700px) {
+    .row{
+        flex-wrap: wrap;
+        flex: 0 0 45%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    footer{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer ul{
+        flex-direction: column;
+    }
+}

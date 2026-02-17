@@ -1,0 +1,139 @@
+place to keep old code and all
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <img src="../assets/chennai.webp" alt="chennai">
+        <h3>Travel</h3>
+        <h2>Somnath</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eligendi iure eaque minima. Eum atque ducimus necessitatibus laudantium aut vero.</p>
+    </div>
+</body>
+</html>
+
+
+h1{
+    width:700px;
+    text-align: center;
+    border:10px solid black; /* not creating a border but now we are making it visible */
+    padding: 100px;
+    margin:50px;
+}
+/* for any inline element the text-align will not work */
+
+
+body{
+    background-color: grey;
+}
+
+div{
+    width:500px;
+    text-align: center;
+    background-color: white;
+    margin:auto;
+    margin-top: 200px;
+    padding:30px;
+    border-radius: 15px;
+
+}
+img{
+    width:50%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+h3{
+    margin-bottom:30px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 7px;
+    width:100px;
+    margin:auto;
+}
+
+//corrected css for the first hands-on
+body{
+    background-color: grey;
+}
+
+.parent{
+    width:250px;
+    text-align: center;
+    background-color: white;
+    margin:auto;
+    margin-top: 200px;
+    padding:30px;
+    border-radius: 10px;
+
+}
+img{
+    width:50%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+h3{
+    margin-bottom:20px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 7px;
+    width:100px;
+    margin:auto;
+}
+
+---------------------------------------------------
+
+<div class="parent">
+        <div class="child child1">1</div>
+        <div class="child child2">2</div>
+        <div class="child child3">3</div>
+    </div>
+
+.parent{
+    max-width: 700px;
+    height:700px;
+    margin: auto;
+    margin-top: 100px;
+    border: 5px solid grey;
+    /* flex container */
+    /* parent-> flex container and the child->flex items */
+    /* by default the direction of the flex is row */
+    display: flex;
+    /* adjust the direction */
+    flex-direction: row;    
+    /* horizontal alignment */
+    justify-content: space-evenly;
+    /* vertical alignment */
+    /* align-items: center; */
+    /* use flex wrap so that the content after being shrinked will come one after another */
+    flex-wrap: wrap; 
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+}
+
+.child1{
+    background-color: blueviolet;
+    /* flex grow */
+    /* flex-grow: 1; */
+
+}
+
+.child2{
+    background-color: red;
+    /* flex-grow: 2; occupy twice the space than child1 */
+}
+
+.child3{
+    background-color: green;
+    /* flex-shrink: 0 ; default the value is 0, */
+}

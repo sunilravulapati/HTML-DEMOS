@@ -1,0 +1,43 @@
+body{
+    background-color: grey;
+    height: 1000px;
+    
+}
+
+.parent{
+    width:250px;
+    height: 300px;
+    text-align: center;
+    background-color: white;
+    margin:auto;
+    margin-top: 200px;
+    padding:30px;
+    border-radius: 10px;
+}
+img{
+    width:50%;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+h3{
+    margin-bottom:20px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    padding: 7px;
+    width:100px;
+    margin:auto;
+}
+.logo1{
+    width: 100px;
+    height:100px;
+    position:absolute;
+    left:850px;
+    top: 200px;
+}
+.logo2{
+    width:100px;
+    position:fixed;
+    top:650px;
+    left:1400px;
+}

@@ -1,0 +1,20 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 20px auto;
+}
+.profile-img {
+  float: right;
+  margin-left: 20px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+h1,
+h3 {
+  color: #333;
+}
+.footer {
+  font-size: 0.9em;
+  color: #666;
+}

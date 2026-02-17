@@ -1,0 +1,28 @@
+.chicken-box {
+  background-color: #e2e5cb;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+}
+.float-left {
+  float: left;
+  margin-right: 15px;
+  border: 2px solid white;
+}
+.red-link {
+  color: #c0392b;
+  font-weight: bold;
+}
+.swiggy {
+  color: #2980b9;
+  font-weight: bold;
+}
+.phone {
+  color: #c0392b;
+}
+.intro::after {
+  content: "";
+  clear: both;
+  display: table;
+} /* Clears the float */
